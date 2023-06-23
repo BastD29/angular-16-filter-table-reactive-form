@@ -1,25 +1,12 @@
 <p>Product list</p>
 
 <form [formGroup]="searchForm">
-  <!-- <label>
-    Search:
-    <input type="text" formControlName="searchTerm" />
-  </label> -->
-
-  <!-- <select formControlName="category">
-    <option value="All">All</option>
-    <option value="Category 1">Category 1</option>
-    <option value="Category 2">Category 2</option>
-  </select> -->
-
   <select formControlName="category">
     <option value="All">All</option>
     <option *ngFor="let category of categories" [value]="category">
       {{ category }}
     </option>
   </select>
-
-  <!-- <button (click)="filterProducts()">Filter</button> -->
 </form>
 
 <table>
